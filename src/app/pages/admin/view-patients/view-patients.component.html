@@ -1,0 +1,33 @@
+<mat-card>
+    <mat-list>
+        <div>All Patients</div>
+        <table class="table table-stripped">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Gender</th>
+                    <th>Age</th>
+                    <th>Specilization</th>
+                    <th>DateOfVist</th>
+                    <th>Phone</th>
+                    <th>VisitedDocter</th>
+                </tr>
+            </thead>
+        <tbody>            
+        <tr *ngFor="let p of patients1 ">
+           
+            <td> <mat-icon mat-list-icon>face</mat-icon>&nbsp;{{p.name}}</td>
+            <td>{{p.gender}}</td>
+            <td>{{p.age}}</td>
+            <td>{{p.specialization}}</td>
+            <td>{{p.dateofvist}}</td>
+            <td>{{p.phonenumber}}</td>
+            <td>{{p.visiteddocter}}</td>
+        </tr>
+        </tbody>
+
+            
+
+        
+    
+

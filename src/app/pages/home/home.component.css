@@ -1,0 +1,12 @@
+.img{
+
+    height:50em; background-size:cover; width:auto;
+     background-image:url('../../../assets/senior-woman-with-walking-frame-hospital-waiting-room-rehabilitation-treatment.jpg');
+     background-position:50% 50%;
+}
+
+.decoration{
+    
+    color:darkblue;
+}
+

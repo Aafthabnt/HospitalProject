@@ -1,0 +1,31 @@
+<mat-toolbar color="primary">
+    <a [routerLink]="'/'" 
+    mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+      <mat-icon>local_hospital</mat-icon>
+   
+    <span>RE MEDIC</span>
+</a>
+    <span class="example-spacer"></span>
+    <a *ngIf="!login.isLoggedIn()"
+    [routerLink]="'/login'"
+    mat-icon-button class="example-icon favorite-icon seprator   " aria-label="Example icon-button with heart icon" >
+      Login
+    </a>
+    <a *ngIf="!login.isLoggedIn()" 
+    [routerLink]="'/signup'" mat-icon-button class="example-icon sepratoright seprator " aria-label="Example icon-button with share icon">
+      Register
+    </a>
+
+    <a (click)="logout()" 
+    *ngIf="login.isLoggedIn()" 
+     mat-icon-button 
+     class="example-icon sepratoright seprator " aria-label="Example icon-button with share icon">
+      {{login.getUser().username}}
+    </a>
+
+    <a (click)="logout()" 
+    *ngIf="login.isLoggedIn()" 
+     mat-icon-button class="example-icon sepratoright seprator " aria-label="Example icon-button with share icon">
+      Logout
+    </a>
+  </mat-toolbar>

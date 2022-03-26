@@ -1,0 +1,83 @@
+<div class="bootstrap-wrapper">
+    <div class="container">
+        <div class="row" style="margin-top: 30px;">
+            <div class="col-md-6 offset-md-3">
+                <mat-card>
+                <div class="container text-center">
+                    <img src="../../../assets/Docter.png" alt=" "/>
+                </div>
+
+                <h1 class="text-center">Docter Register Here!!</h1>
+
+                <!--{{docter | json}}-->
+
+                <form (ngSubmit)="formSubmit()">
+                    <!--username field -->
+                        <mat-form-field appearance="outline" class="full-width">
+                          <mat-label>User Name</mat-label>
+                          <input
+                          [(ngModel)]="docter.username"
+                          name="username"
+                           matInput placeholder="Enter here" required/>
+                          <mat-hint>Unique</mat-hint>
+                        </mat-form-field>
+
+                        <!--password field -->
+                        <mat-form-field appearance="outline" class="full-width">
+                            <mat-label>Password</mat-label>
+                            <input
+                            [(ngModel)]="docter.password"
+                             name="password" 
+                            matInput placeholder="Enter here" type="password" required/>
+                            <mat-hint>mainimum length 8 characters</mat-hint>
+                          </mat-form-field>
+
+                          <!--First Name -->
+                        <mat-form-field appearance="outline" class="full-width">
+                            <mat-label>First Name</mat-label>
+                            <input [(ngModel)]="docter.firstName"
+                            name="firstname" matInput placeholder="Enter here" required/>           
+                          </mat-form-field>
+
+
+                          <!--Last Name -->
+                        <mat-form-field appearance="outline" class="full-width">
+                            <mat-label>Last Name</mat-label>
+                            <input [(ngModel)]="docter.lastName"
+                            name="lastname"
+                            matInput placeholder="Enter here" />
+                          </mat-form-field>
+
+
+                          <!--Specialization field -->
+                        <mat-form-field appearance="outline" class="full-width">
+                            <mat-label>Specialization</mat-label>
+                            <input [(ngModel)]="docter.specialization"
+                            name="specialization"
+                            matInput placeholder="Enter here" required/>
+                            <mat-hint>example:neurologist,cardiac,gynacologist,pyschologist,etc</mat-hint>
+                          </mat-form-field>
+
+
+                          <!--password field -->
+                        <mat-form-field appearance="outline" class="full-width">
+                            <mat-label>Phone</mat-label>
+                            <input 
+                            [(ngModel)]="docter.phone"
+                          name="phone" matInput placeholder="Enter here" type="number" required/>
+                          </mat-form-field>
+
+                          <div class="container text-center" >
+                              <button mat-raised-button color="primary" class="seprator" type="submit">Register</button>
+                              <button mat-raised-button color="accent" class="seprator" type="reset">clear</button>
+                          </div>
+
+                      
+                </form>
+            </mat-card>
+
+            </div>
+
+        </div>
+    </div>
+</div>
